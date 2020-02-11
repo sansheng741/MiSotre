@@ -595,7 +595,8 @@ ul {
 	width: 6700px;
 	height: 100%;
 }
-.flash-goods{
+
+.flash-goods {
 	width: 992px;
 	height: 100%;
 	/* background-color: #7381ff; */
@@ -652,7 +653,8 @@ ul {
 .price {
 	text-align: center;
 }
-.price span:nth-child(1){
+
+.price span:nth-child(1) {
 	color: #ff6700;
 }
 
@@ -678,11 +680,74 @@ ul {
 .home-brick-box {
 	width: 100%;
 	height: 686px;
-	background-color: #03B3AD;
+	/* background-color: #03B3AD; */
 }
 
+
+/* 手机 */
 .phone {
-	background-color: red;
+	/* background-color: red; */
+}
+
+.phone-span1 {
+	width: 234px;
+	height: 614px;
+	/* background-color: #03B3AD; */
+	float: left;
+	transition: all .2s linear;
+	cursor: pointer;
+}
+
+.phone-span1:hover {
+	margin-top: -3px;
+}
+
+.phone-span2 {
+	width: 992px;
+	height: 628px;
+	/* background-color: #2C2C2C; */
+	float: left;
+}
+
+.phone-content img {
+	width: 160px;
+	height: 160px;
+	margin: 0px 37px 10px;
+}
+.phone-title{
+	text-align: center;
+	font-size: 14px;
+	font-weight: 400;
+	text-overflow: ellipsis;
+	color: #212121;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-bottom: 5px;
+}
+
+.phone-span2 ul{
+	position: relative;
+	width: auto;
+	height: 100%;
+}
+.phone-span2 ul li {
+	height: 260px;
+	width: 234px;
+	padding: 20px 0;
+	position: relative;
+	z-index: 1;
+	float: left;
+	margin-left: 14px;
+	margin-bottom: 14px;
+	background: #fff;
+	cursor: pointer;
+	transition: all .2s linear;
+}
+
+.phone-span2 ul li:hover{
+	/* margin-top: -3px; */
+	transform: translateY(-3px);
+	box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
 }
 
 .jd {
