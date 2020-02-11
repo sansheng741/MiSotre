@@ -36,6 +36,8 @@ $(".search_sub").hover(
 	}
 
 );
+
+// 轮播图图片下标
 var index = 0;
 $(".lt-btn").on("click", function(e) {
 	$(".lb-point ol li").eq(index).removeClass("hoverPoint");
@@ -45,6 +47,8 @@ $(".lt-btn").on("click", function(e) {
 	}
 	$(".lb-right ul li").eq(index).addClass("lb-display");
 	$(".lb-point ol li").eq(index).addClass("hoverPoint");
+
+	fun_fun_Interval();
 });
 
 $(".gt-btn").on("click", function(e) {
@@ -55,6 +59,8 @@ $(".gt-btn").on("click", function(e) {
 	}
 	$(".lb-right ul li").eq(index).addClass("lb-display");
 	$(".lb-point ol li").eq(index).addClass("hoverPoint");
+
+	fun_fun_Interval();
 });
 
 $(".lb-left ul li").hover(
@@ -70,7 +76,7 @@ $(".lb-left ul li").hover(
 	}
 );
 
-$(".lb-point ol li").click(function(){
+$(".lb-point ol li").click(function() {
 	//删除所有class
 	$(".lb-point ol li").removeClass("hoverPoint");
 	//被点击的标签赋予class
@@ -79,4 +85,63 @@ $(".lb-point ol li").click(function(){
 	$(".lb-right ul li").eq(index).removeClass("lb-display");
 	index = $(this).index();
 	$(".lb-right ul li").eq(index).addClass("lb-display");
+
+	fun_fun_Interval();
+});
+
+// 定时器 使轮播图自动滑动
+fun_Interval(); //调用
+var lb_Interval;
+
+function fun_Interval() {
+	lb_Interval = setInterval(function() {
+		$(".lb-point ol li").eq(index).removeClass("hoverPoint");
+		$(".lb-right ul li").eq(index++).removeClass("lb-display");
+		if (index > 4) {
+			index = 0;
+		}
+		$(".lb-right ul li").eq(index).addClass("lb-display");
+		$(".lb-point ol li").eq(index).addClass("hoverPoint");
+	}, 5000);
+}
+
+function fun_fun_Interval() {
+	clearInterval(lb_Interval);
+	fun_Interval();
+}
+
+// 闪购
+$(".flash-btn span").eq(0).click(function() {
+	$(".flashsale-demo ul").css({
+		marginLeft: function(index, value) {
+			var move = parseInt(value);
+			if (key && move < 0) {
+				key = false;
+				$(".flashsale-demo ul").animate({
+					marginLeft: "+=992" //移动图片,累加
+				}, 500, function() {
+					key = true;
+				});
+			}
+		}
+	});
+
+});
+
+var key = true;
+$(".flash-btn span").eq(1).click(function() {
+	$(".flashsale-demo ul").css({
+		marginLeft: function(index, value) {
+			var move = parseInt(value);
+			if (move >= -992 * 4 && key) {
+				key = false;
+				$(".flashsale-demo ul").animate({
+					marginLeft: "-=992" //移动图片,累加
+				}, 500, function() {
+					key = true;
+				});
+			}
+		}
+	});
+	
 });

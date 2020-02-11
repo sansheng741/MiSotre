@@ -13,6 +13,10 @@ li {
 	list-style: none;
 }
 
+ul {
+	padding-left: 0;
+}
+
 .nav {
 	width: 100%;
 	height: 42px;
@@ -488,15 +492,168 @@ li {
 .page-container {
 	width: 1226px;
 	height: 100%;
-	background-color: rgba(0, 0, 0, .1);
 	margin: 0 auto;
 }
 
+/* 闪购 */
 .home-flashsale {
 	width: 100%;
 	height: 398px;
-	background-color: #03B3AD;
 	margin-bottom: 22px;
+	position: relative;
+}
+
+.flashsale-demo {
+	width: 100%;
+	height: 340px;
+	/* overflow: hidden; */
+}
+
+.flash-btn {
+	width: 80px;
+	height: 25px;
+	/* background-color: #007AFF; */
+	position: absolute;
+	right: 0;
+	top: 25px;
+}
+
+.flash-btn span:hover {
+	color: #ff6700;
+}
+
+.flash-btn span {
+	display: inline-block;
+	width: 24px;
+	height: 16px;
+	padding: 3px 5px;
+	border: 1px solid #e0e0e0;
+	font-size: 24px;
+	line-height: 16px;
+	transition: color .5s;
+	color: #b0b0b0;
+	text-align: center;
+	cursor: pointer;
+}
+
+.flashsale-js {
+	width: 234px;
+	height: 339px;
+	border-top: 1px solid red;
+	float: left;
+	background: #f1eded;
+	z-index: 999;
+}
+
+.flashsale-js p {
+	font-size: 21px;
+	color: #ef3a3b;
+	font-weight: 350;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.flashsale-js span {
+	width: 46px;
+	height: 46px;
+	background: #605751;
+	color: #fff;
+	font-size: 24px;
+	line-height: 46px;
+	float: left;
+	text-align: center;
+}
+
+.flash-time {
+	margin-left: 35px;
+	margin-top: 25px;
+}
+
+.flashsale-js i {
+	width: 15px;
+	float: left;
+	height: 46px;
+	line-height: 46px;
+	color: #605751;
+	font-size: 28px;
+	font-style: normal;
+	text-align: center;
+}
+
+.flash-icon {
+	width: 100%;
+	height: 65px;
+	padding: 5px 0;
+	margin-top: 20px;
+}
+
+.flash-icon img {
+	margin-left: 85px;
+}
+
+.flashsale-demo ul {
+	width: 6700px;
+	height: 100%;
+}
+.flash-goods{
+	width: 992px;
+	height: 100%;
+	/* background-color: #7381ff; */
+	float: left;
+	overflow: hidden;
+}
+
+.flashsale-demo ul li {
+	width: 234px;
+	height: 339px;
+	background-color: #fff;
+	float: left;
+	margin-left: 14px;
+}
+
+.flashsale-demo ul li:nth-child(odd) {
+	border-top: 1px solid red;
+}
+
+.flashsale-demo ul li:nth-child(even) {
+	border-top: 1px solid gold;
+}
+
+.flash-content {
+	margin-top: 29px;
+}
+
+.flash-content img {
+	margin: 0 17px 10px;
+}
+
+.flash-title {
+	text-align: center;
+	font-size: 14px;
+	font-weight: 400;
+	text-overflow: ellipsis;
+	color: #212121;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-bottom: 5px;
+}
+
+.desc {
+	height: 18px;
+	margin: 0 20px 12px;
+	font-size: 12px;
+	text-overflow: ellipsis;
+	color: #b0b0b0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-align: center;
+}
+
+.price {
+	text-align: center;
+}
+.price span:nth-child(1){
+	color: #ff6700;
 }
 
 .home-banner-box {
@@ -518,31 +675,46 @@ li {
 	color: #333;
 }
 
-.home-brick-box{
+.home-brick-box {
 	width: 100%;
 	height: 686px;
 	background-color: #03B3AD;
 }
-.phone{
+
+.phone {
 	background-color: red;
 }
-.jd{
+
+.jd {
 	background-color: #212121;
 }
-.intelligence{
+
+.intelligence {
 	background-color: #03B3AD;
 }
-.collocation{
+
+.collocation {
 	background-color: #A31DAF;
 }
-.parts{
+
+.parts {
 	background-color: darksalmon;
 }
-.periphery{
+
+.periphery {
 	background-color: cyan;
 }
-.home-video-box{
+
+.home-video-box {
 	width: 100%;
 	height: 357px;
 	background-color: darkgrey;
+}
+
+
+/* 底部 */
+.footer {
+	width: 100%;
+	height: 504px;
+	background-color: dimgray;
 }
