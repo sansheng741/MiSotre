@@ -145,3 +145,59 @@ $(".flash-btn span").eq(1).click(function() {
 	});
 	
 });
+
+// 家电
+$(".jd-selected span").hover(function(){
+	// 改变导航属性
+	$(".jd-selected span").removeClass("tab-active");
+	$(this).addClass("tab-active");
+	
+	//切换显示图片
+	$(".jd-span2 ul").removeClass("jd-show");
+	$(".jd-span2 ul").eq($(this).index()).addClass("jd-show");
+});
+
+// 智能
+$(".intelligence-selected span").hover(function(){
+	// 改变导航属性
+	$(".intelligence-selected span").removeClass("tab-active");
+	$(this).addClass("tab-active");
+	
+	//切换显示图片
+	$(".intelligence-span2 ul").removeClass("intelligence-show");
+	$(".intelligence-span2 ul").eq($(this).index()).addClass("intelligence-show");
+});
+
+// 搭配
+$(".collocation-selected span").hover(function(){
+	// 改变导航属性
+	$(".collocation-selected span").removeClass("tab-active");
+	$(this).addClass("tab-active");
+	
+	//切换显示图片
+	$(".collocation-span2 ul").removeClass("collocation-show");
+	$(".collocation-span2 ul").eq($(this).index()).addClass("collocation-show");
+});
+
+// 配件
+$(".parts-selected span").hover(function(){
+	// 改变导航属性
+	$(".parts-selected span").removeClass("tab-active");
+	$(this).addClass("tab-active");
+	
+	//切换显示图片
+	$(".parts-span2 ul").removeClass("parts-show");
+	$(".parts-span2 ul").eq($(this).index()).addClass("parts-show");
+});
+
+// 周边
+// 配件
+$(".periphery-selected span").hover(function(){
+	// 改变导航属性
+	$(".periphery-selected span").removeClass("tab-active");
+	$(this).addClass("tab-active");
+	
+	//切换显示图片
+	$(".periphery-span2 ul").removeClass("periphery-show");
+	$(".periphery-span2 ul").eq($(this).index()).addClass("periphery-show");
+});
